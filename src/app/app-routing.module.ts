@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'vazao',
+    loadChildren: () => import('./view/vazao/vazao.module').then( m => m.VazaoPageModule)
   }
 ];
 

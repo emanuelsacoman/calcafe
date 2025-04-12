@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Formulário de Vazão</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <form (ngSubmit)="submitFormVazao(form)" #form="ngForm">
+            
+            <ion-list>
+              <ion-list-header>
+                <ion-label>Área 1 - Dados Iniciais</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label position="floating">Número 1</ion-label>
+                <ion-input name="numero1" type="number" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Número 2</ion-label>
+                <ion-input name="numero2" type="number" ngModel required></ion-input>
+              </ion-item>
+            </ion-list>
+      
+            <ion-list>
+              <ion-list-header>
+                <ion-label>Área 2 - Informações Complementares</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label position="floating">Descrição</ion-label>
+                <ion-input name="descricao" type="text" ngModel></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Observações</ion-label>
+                <ion-textarea name="observacoes" ngModel></ion-textarea>
+              </ion-item>
+            </ion-list>
+      
+            <ion-button type="submit" expand="block" color="primary" [disabled]="!form.valid">
+              Enviar
+            </ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+
+  </div>
+
+</ion-content>
