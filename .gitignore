@@ -70,4 +70,6 @@ testem.log
 Thumbs.db
 
 # Environments
-/environments
+environments/
+!environments/*
+
