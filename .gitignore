@@ -1,75 +1,45 @@
-# Specifies intentionally untracked files to ignore when using Git
-# http://git-scm.com/docs/gitignore
+# Arquivos de configuração específicos do ambiente
+.env
 
-*~
-*.sw[mnpcod]
-.tmp
-*.tmp
-*.tmp.*
-UserInterfaceState.xcuserstate
-$RECYCLE.BIN/
-
+# Arquivos de log ou de saída de depuração
 *.log
-log.txt
+*.log.*
+*.out
+*.err
+*.dump
 
-
-/.sourcemaps
-/.versions
-/coverage
-
-# Ionic
-/.ionic
-/www
-/platforms
-/plugins
-
-# Compiled output
+# Pastas de build ou de compilação
+/build
 /dist
-/tmp
-/out-tsc
-/bazel-out
+/obj
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Arquivos temporários ou de cache
+*.tmp
+*.temp
+*.bak
+*.old
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-project
-*.sublime-workspace
+# Arquivos de backup ou de cópia de segurança
+*.backup
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-
-# Miscellaneous
-/.angular
-/.angular/cache
-.sass-cache/
-/.nx
-/.nx/cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
+# Arquivos de sistema operacional ou de IDE
 .DS_Store
-Thumbs.db
+.idea
+*.sublime-workspace
+*.suo
 
-# Environments
+# Pastas de node_modules
+node_modules/
+!node_modules/*
+
+# Pastas de environments
 environments/
 !environments/*
 
+# Arquivos e pastas ocultos
+.*/
+*/.*/
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

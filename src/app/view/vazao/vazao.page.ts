@@ -16,7 +16,7 @@ export class VazaoPage implements OnInit {
   submitFormVazao(form: NgForm): void {
     if (!form.valid) { return; }
 
-    // 1) Extrai e garante que são números
+    // Extrai e garante que são números
     const areaHa          = parseFloat(form.value.areaHa);
     const chuvaMm         = parseFloat(form.value.chuvaMm);
     const distanciaM      = parseFloat(form.value.distanciaM);
@@ -24,7 +24,7 @@ export class VazaoPage implements OnInit {
     const volumeSistemaL  = parseFloat(form.value.volumeSistemaL);
     const numBicos        = parseInt(form.value.numBicos, 10);
 
-    // 2) Cálculos intermediários conforme a folha
+    // Cálculos intermediários conforme a folha
     const volumeChuvaL      = areaHa * chuvaMm * 10000;
     const fluxoLMin         = volumeChuvaL / 1440;
     const velocidadeMS      = distanciaM / tempoPercorridoS;
@@ -33,7 +33,7 @@ export class VazaoPage implements OnInit {
     const vazaoPorBicoLS    = vazaoSistemaLS / numBicos;
     const volumePorBico15sL = vazaoPorBicoLS * 15;
 
-    // 3) Print de todos os resultados
+    // Print de todos os resultados
     console.group('🧮 Cálculo de vazão');
     console.log('Área (ha):'               , areaHa);
     console.log('Chuva diária (mm):'       , chuvaMm);
