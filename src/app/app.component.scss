@@ -2,6 +2,10 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
+ion-app *{
+  scrollbar-color: var(--ion-scrollbar-thumb-color, rgba(0, 0, 0, 0.2))
+    var(--ion-scrollbar-track-color, transparent);
+}
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
